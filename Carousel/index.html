@@ -70,25 +70,27 @@
       const prev = document.querySelector("#prev-button");
       const img = document.querySelector("img");
 
+      const display = () => {
+        const image = images[currentIndex];
+        img.src = image;
+      };
+
       next.addEventListener("click", function () {
         if (currentIndex + 1 === images.length) {
           currentIndex = 0;
         } else {
           currentIndex++;
         }
-        const image = images[currentIndex];
-        img.src = image;
+        display();
       });
 
       prev.addEventListener("click", function () {
-        console.log(currentIndex);
         if (currentIndex === 0) {
           currentIndex = images.length - 1;
         } else {
           currentIndex--;
         }
-        const image = images[currentIndex];
-        img.src = image;
+        display();
       });
       //solution end here
     </script>
