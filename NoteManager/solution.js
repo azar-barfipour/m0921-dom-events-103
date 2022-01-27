@@ -42,7 +42,7 @@ form.addEventListener('submit', function(e){
     li.appendChild(firstP)
     li.appendChild(secondP)
     // li.appendChild(input)
-    list.appendChild(input)
+    list.appendChild(li)
 
     e.target[0].value = ''
 
